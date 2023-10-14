@@ -27,7 +27,8 @@ export const ToDoWrapper = () => {
     }
     return (
         <section>
-            <div className='TodoWrapper'>
+            <div className='TodoWrapper1'>
+                <h1 className='heading'>ToDo List</h1>
             
             {todos.map((todo, index) => (
                 todo.isEditing ? (

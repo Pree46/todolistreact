@@ -8,10 +8,23 @@
 }
 
 body {
-  background: #8758ff;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(1000deg, #97FEED ,#35A29F, #071952);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite; 
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }}
 }
 
 .App {
@@ -25,13 +38,27 @@ h1 {
 }
 
 .TodoWrapper {
-  background: #1A1A40;
+
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
 }
 
+.TodoWrapper1 {
+
+  background-color: rgba(79, 210, 206, 0.35);
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+.heading{
+  margin-bottom: 30px;
+}
+
 .TodoForm {
+  display: flex; 
+  align-items: baseline; 
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -39,7 +66,8 @@ h1 {
 .todo-input {
   outline: none;
   background: none;
-  border: 1px solid #8758ff;
+  text-decoration: none;
+  border: none;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -47,27 +75,45 @@ h1 {
   color: #fff;
 }
 
+.todo-input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #35A29F;
+}
+::placeholder{
+  opacity: 0.75;
+}
+
 .todo-input::placeholder {
   color: #ffffff4d;
+  
 }
 
 .todo-btn {
-  background: #8758ff;
+  background: #35A29F;
   color: #fff;
   border: none;
+  width: 40px;
+  font-size: medium;
+  font-weight: 600;
   padding: 0.55rem;
   cursor: pointer;
+  border-radius: 50%;
+  margin-left: 0.5rem;
 }
+
 
 .Todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #8758ff;
+  background: transparent;
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
+}
+.Todo:hover {
+  cursor: pointer;
 }
 
 .fa-trash {
